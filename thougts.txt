@@ -1,0 +1,16 @@
+
+an app that gives you random recipes or you querry each category        random recipe in the category?high level 
+
+select multible categorys and querry/search for it 
+
+set up project 
+
+save database // recipes in database 
+
+and take data from there 
+
+by findById()   
+
+save and querry/find each category   {req.body.category}
+
+querry data by find()? 
