@@ -9,19 +9,50 @@
 <body>
  <div class="container">
     <h1 class="mb-4">Recipes</h1>
+    <h3>
+        Querry through Categories!
+    </h3>
+    <form action="/" method="post">
+      <div class="form-check form-check-inline" >
+        <input class="form-check-input" type="checkbox" value="vegetarian" name="category" id="veggi">
+        <label class="form-check-label" for="veggi">Vegetarian</label>
+      </div>
+      <div class="form-check form-check-inline" >
+        <input class="form-check-input" type="checkbox" value="vegan" name="category" id="vegan">
+        <label class="form-check-label" for="vegan">Vegan</label>
+      </div>
+      <div class="form-check form-check-inline" >
+        <input class="form-check-input" type="checkbox" value="meat" name="category" id="meat">
+        <label class="form-check-label" for="meat">Meat</label>
+      </div>
+      <div class="form-check form-check-inline" >
+        <input class="form-check-input" type="checkbox" value="fish" name="category" id="fish">
+        <label class="form-check-label" for="fish">Fish</label>
+      </div>
+       <div class="form-check form-check-inline" >
+        <input class="form-check-input" type="checkbox" value="dessert" name="category" id="dessert">
+        <label class="form-check-label" for="dessert">Sweet Dessert</label>
+      </div>
+      <div class="form-check form-check-inline" >
+        <input class="form-check-input" type="checkbox" value="random" name="category" id="random">
+        <label class="form-check-label" for="random">Get one Random recipe</label>
+      </div>
+      <div>
+        <input type="text" name="searchBox" id="searchBox" >
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+ </div>
 
-
-    <% recipes.forEach(recipe => { %>
-    <div class="mt-4 card ">
-        <div class="card-body">
-            <h4 class="card-title"><%= recipes %></h4>
-            <div class="card-text mb-2">
-              
+    
+        <% recipe.forEach(recipe => { %>
+          <div class="mt-4 card ">
+            <div class="card-body">
+              <h4 class="card-title"><a href="<%= recipe.link %>" target="_blank"><%= recipe.title %></a></h4>
+              <div class="card-text mb-2">
+              </div>
             </div>
-        </div>
-    </div>
-     <%   }) %>
-
+          </div>
+        <% }) %> 
  </div>
 </body>
 </html>
