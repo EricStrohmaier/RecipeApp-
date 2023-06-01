@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const Recipe = require("./models/recipeDataModel");
 const path = require("path");
+require('dotenv').config();
 
 const app = express();
 
@@ -67,6 +68,6 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(3001, function () {
+app.listen(process.env.PORT || 3001, function () {
   console.log(`App listening on port 3001!`);
 });
