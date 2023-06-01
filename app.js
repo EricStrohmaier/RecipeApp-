@@ -6,7 +6,7 @@ const path = require("path");
 
 const app = express();
 
-mongoose.connect("mongodb://127.0.0.1:27017/recipes", {
+mongoose.connect("mongodb+srv://ericstrohmaier00:55XITde0cAmqZ2uR@recipewebapp.02wvnv5.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
    connectTimeoutMS: 30000, // Increased timeout value to 30 seconds
