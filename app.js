@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const app = express();
 
-mongoose.connect("mongodb+srv://ericstrohmaier00:55XITde0cAmqZ2uR@recipewebapp.02wvnv5.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
    connectTimeoutMS: 30000, // Increased timeout value to 30 seconds
